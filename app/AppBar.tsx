@@ -6,7 +6,7 @@ const sideLength = 24
 import { Disclosure } from '@headlessui/react'
 // ! AppBar should not adjust according to user state, as it slows all pages down
 export const AppBar = () => {
-  const navigation = []
+  const navigation: string[] = []
   return (
     <div className='w-full'>
       <nav className='container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0'>

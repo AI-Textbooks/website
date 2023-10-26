@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image"
 import React from 'react'
 import Container from "./container"
 
@@ -31,7 +30,7 @@ const Product = (props) => {
 
             <div className="w-full mt-5">
               {data.bullets.map((item, index) => (
-                <Mark>S</Mark>
+                <Mark key={index}>S</Mark>
               ))}
             </div>
           </div>
