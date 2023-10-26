@@ -1,0 +1,13 @@
+ 
+
+    @media (prefers-color-scheme: dark) {
+      svg text tspan {
+        fill: #fff
+      }
+    }
+    @media (prefers-color-scheme: light) {
+      svg text tspan {
+        fill: #000;
+      }
+    
+    }
