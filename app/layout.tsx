@@ -36,9 +36,6 @@ export default function RootLayout({
           content="Nurturing a future where AI models become interfaces between open knowledge repositories."
         />
         <meta property="og:url" content="https://ai-textbooks.com" />
-
-        <title>My page title</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </head>
       <body className={inter.className}>
         <AppBar />
