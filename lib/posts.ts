@@ -10,7 +10,8 @@ import matter from 'gray-matter'
 // Import 'remark', library for rendering markdown
 import { remark } from 'remark'
 import html from 'remark-html'
-import rehypeAddClasses from 'rehype-add-classes'
+const rehypeAddClasses = require('rehype-add-classes');
+
 import rehypeStringify from 'rehype-stringify'
 import { join } from 'path'
 import { unified } from 'unified'

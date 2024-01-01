@@ -2,7 +2,7 @@
 title: 'Navigating the Landscape of Information: A Series Introduction'
 date: '2024-01-01'
 description: 'The manifesto of ai:textbooks.'
-author: [john, mathias]
+author: [mathias]
 ---
 
 ## I. Introduction
