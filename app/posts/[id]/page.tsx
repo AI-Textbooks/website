@@ -1,4 +1,5 @@
-import { getAllPostIds, getPostData } from '@/lib/posts'
+import { MP3Player } from '@/app/components/mp3player'
+import { getPostData } from '@/lib/posts'
 
 type Params = {
   id: string
@@ -34,8 +35,9 @@ const authors = [
 
 // -< Post >-
 export default async function Post({ params }: Props) {
-  const postData: PostData = await getPostData(params.id)
-
+  const postData: PostData & {
+    audio: string
+  } = await getPostData(params.id)
   return (
     <>
       <article className='mx-auto w-full max-w-2xl p-4 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert'>
@@ -63,6 +65,9 @@ export default async function Post({ params }: Props) {
             </div>
           </address>
         </header>
+        <div className='mb-6'>
+          <MP3Player src={'/audio/' + postData.audio} />
+        </div>
         <div
           className='prose prose-lg space-y-4'
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
