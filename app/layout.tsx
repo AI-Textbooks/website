@@ -30,7 +30,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>AI Textbooks</title>
         <meta
           name="description"
           content="Nurturing a future where AI models become interfaces between open knowledge repositories."
