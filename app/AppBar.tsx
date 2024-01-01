@@ -6,7 +6,9 @@ const sideLength = 24
 import { Disclosure } from '@headlessui/react'
 // ! AppBar should not adjust according to user state, as it slows all pages down
 export const AppBar = () => {
-  const navigation: string[] = []
+  const navigation: string[] = [
+    'posts'
+  ]
   return (
     <div className='w-full'>
       <nav className='container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0'>
@@ -24,8 +26,8 @@ export const AppBar = () => {
                       width={sideLength}
                       height={sideLength}
                     />
-                    <p className='ml-2 text-center font-serif text-m dark:text-white hidden xs:inline-block'>
-                      AI Textbooks
+                    <p className='ml-2 text-center font-header dark:text-white hidden xs:inline-block'>
+                      ai:textbooks
                     </p>
                   </span>
                 </Link>
@@ -60,8 +62,8 @@ export const AppBar = () => {
                     {navigation.map((item, index) => (
                       <Link
                         key={index}
-                        href='/'
-                        className='w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none'
+                        href={"/" + item}
+                        className='w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-emerald-300 focus:text-black focus:bg-emerald-300 focus:outline-none dark:focus:bg-emerald-300'
                       >
                         {item}
                       </Link>
@@ -70,7 +72,7 @@ export const AppBar = () => {
                       href='#github-download'
                       className='w-full px-6 py-2 mt-3 text-center text-white bg-gradient-to-r from-cyan-500/70 to-cyan-200/70 rounded-md lg:ml-5'
                     >
-                      Get Started
+                      know more
                     </Link>
                   </>
                 </Disclosure.Panel>
@@ -85,8 +87,8 @@ export const AppBar = () => {
             {navigation.map((menu, index) => (
               <li className='mr-3 nav__item' key={index}>
                 <Link
-                  href='/'
-                  className='inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800'
+                  href={"/" + menu}
+                  className='inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-emerald-300 focus:text-black focus:bg-emerald-300 focus:outline-none dark:focus:bg-emerald-300'
                 >
                   {menu}
                 </Link>
@@ -97,10 +99,10 @@ export const AppBar = () => {
 
         <div className='hidden mr-3 space-x-4 lg:flex nav__item'>
           <Link
-            href='/#github-download'
-            className='px-6 py-2 text-white bg-gradient-to-r from-cyan-500/70 to-cyan-200/70 rounded-md md:ml-5'
+            href='/posts/introduction'
+            className='px-6 py-2 text-black bg-gradient-to-r from-emerald-300 to-cyan-200/70 rounded-md md:ml-5'
           >
-            Get Started
+            know more
           </Link>
         </div>
       </nav>

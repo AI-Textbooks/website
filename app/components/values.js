@@ -64,7 +64,7 @@ function Mark(props) {
   return (
     <>
       {" "}
-      <mark className="text-white bg-cyan-500/70 rounded-md dark:ring-cyan-500/70 dark:bg-cyan-500/70 dark:text-black px-1">
+      <mark className="text-black bg-emerald-300 rounded-md dark:ring-cyan-500/70 dark:bg-gradient-to-r dark:from-emerald-300 dark:to-cyan-200/70 dark:text-black px-1">
         {props.children}
       </mark>{" "}
     </>

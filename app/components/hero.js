@@ -8,19 +8,19 @@ const Hero = () => {
       <Container className="flex flex-wrap h-full xl:h-[75vh]">
         <div className="flex items-center w-full lg:w-1/2">
           <div className="max-w-2xl mb-8">
-            <h1 className="text-4xl font-bold font-serif leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-              Building the open knowledge ecosystem
+            <h1 className="text-4xl font-normal font-header leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
+              we nurture the open knowledge ecosystem
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
-              Nurturing a future where AI models become interfaces between open knowledge repositories.
+              adapting AI interfaces to benefit from collaborative knowledge repositories
             </p>
 
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
               <a
-                href="#github-download"
+                href={"/posts/introduction"}
                 rel="noopener"
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-gradient-to-r from-cyan-500/70 to-cyan-200/70 rounded-md ">
-                Get Started
+                className="px-6 py-2 text-lg font-medium text-center text-black bg-gradient-to-r from-emerald-300 to-cyan-200/70 rounded-md ">
+                know more
               </a>
             </div>
           </div>

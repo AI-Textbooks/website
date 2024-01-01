@@ -23,13 +23,13 @@ export default function Footer() {
                   height={sideLength}
                 />
                 <span className='ml-2 text-center text-m dark:text-white hidden xs:inline-block'>
-                  AI Textbooks
+                  ai:textbooks
                 </span>
               </Link>
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nurturing a future where AI models become interfaces between open knowledge repositories.
+              Adapting AI interfaces to benefit from collaborative knowledge repositories
             </div>
           </div>
 

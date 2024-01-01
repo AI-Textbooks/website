@@ -19,9 +19,6 @@ export default function Home() {
         a better future.
       </SectionTitle>
       <Values />
-      <Cta />
-      <Timeline imgPos="right" data={benefitOne} />
-      <Footer />
     </>
   )
 }
