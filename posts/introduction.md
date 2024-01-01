@@ -3,6 +3,7 @@ title: 'Navigating the Landscape of Information: A Series Introduction'
 date: '2024-01-01'
 description: 'The manifesto of ai:textbooks.'
 author: [mathias]
+audio: 'navigating_the_landscape_of_information_a_series_introduction.mp3'
 ---
 
 ## I. Introduction
