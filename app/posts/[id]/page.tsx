@@ -15,6 +15,7 @@ type PostData = {
   description: string
   author: [string]
   contentHtml: string
+  audio: string
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -35,9 +36,7 @@ const authors = [
 
 // -< Post >-
 export default async function Post({ params }: Props) {
-  const postData: PostData & {
-    audio: string
-  } = await getPostData(params.id)
+  const postData: PostData = await getPostData(params.id)
   return (
     <>
       <article className='mx-auto w-full max-w-2xl p-4 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert'>
