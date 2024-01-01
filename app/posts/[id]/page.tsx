@@ -35,7 +35,7 @@ export default async function Post({ params }: Props) {
 
   return (
     <>
-      <article className='mx-auto w-full max-w-2xl p-2 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert'>
+      <article className='mx-auto w-full max-w-2xl p-4 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert'>
         <header className='mb-4 lg:mb-6 not-format'>
           <h1 className='mb-4 text-5xl font-medium font-header leading-tight lg:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-emerald-100 to-emerald-300 '>
             {postData.title}

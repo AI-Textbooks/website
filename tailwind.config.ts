@@ -38,6 +38,7 @@ const config: Config = {
     fontFamily: {
       serif: ['"Spectral"'],
       sans: ['Hind'],
+      header: ["Open Sans"]
     },
   },
   plugins: [require('@savvywombat/tailwindcss-grid-areas')],

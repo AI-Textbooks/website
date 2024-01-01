@@ -63,14 +63,14 @@ export const AppBar = () => {
                       <Link
                         key={index}
                         href={"/" + item}
-                        className='w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-emerald-300 focus:text-black focus:bg-emerald-300 focus:outline-none dark:focus:bg-emerald-300'
+                        className='w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-emerald-300 focus:text-black focus:bg-emerald-300 focus:outline-none dark:focus:bg-emerald-300'
                       >
                         {item}
                       </Link>
                     ))}
                     <Link
                       href='#github-download'
-                      className='w-full px-6 py-2 mt-3 text-center text-white bg-gradient-to-r from-cyan-500/70 to-cyan-200/70 rounded-md lg:ml-5'
+                      className='w-full px-6 py-2 mt-3 text-center text-black bg-gradient-to-r from-emerald-300 to-cyan-200/70 rounded-md lg:ml-5'
                     >
                       know more
                     </Link>
