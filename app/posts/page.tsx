@@ -11,8 +11,8 @@ type AllPostsData = {
 }[]
 
 const authors = [
-  { id: 'john', name: 'John Choque', bio: 'CEO @ai-textbooks'},
-  { id: 'mathias', name: 'Mathias Torp', bio: 'CTO @ai-textbooks'},
+  { id: 'john', name: 'John Choque', bio: 'Computer Scientist'},
+  { id: 'mathias', name: 'Mathias Torp', bio: 'Innovation Engineer'},
 ]
 
 export default function Posts({}) {

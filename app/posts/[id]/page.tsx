@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: Props) {
 }
 
 const authors = [
-  { id: 'john', name: 'John Choque', bio: 'CEO @ai-textbooks' },
-  { id: 'mathias', name: 'Mathias Torp', bio: 'CTO @ai-textbooks' },
+  { id: 'john', name: 'John Choque', bio: 'Computer Scientist' },
+  { id: 'mathias', name: 'Mathias Torp', bio: 'Innovation Engineer' },
 ]
 
 // -< Post >-
@@ -41,7 +41,7 @@ export default async function Post({ params }: Props) {
     <>
       <article className='mx-auto w-full max-w-2xl p-4 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert'>
         <header className='mb-4 lg:mb-6 not-format'>
-          <h1 className='mb-4 text-5xl font-medium font-header leading-tight lg:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-emerald-100 to-emerald-300 '>
+          <h1 className='mb-4 text-5xl font-medium font-header leading-tight lg:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-200/70 '>
             {postData.title}
           </h1>
           <address className='items-center mb-6 not-italic'>

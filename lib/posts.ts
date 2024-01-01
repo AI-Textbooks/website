@@ -131,7 +131,7 @@ export async function getPostData(id: string) {
       // Define your default classes here
       'h1': 'text-3xl',
       'p': 'text',
-      'h2': 'text-2xl font-header font-medium text-transparent bg-clip-text bg-gradient-to-r from-emerald-100 to-emerald-300'
+      'h2': 'text-2xl font-header font-medium text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-200/70 '
       // Add more tags as needed
     })
     //.use(rehypeStringify)
