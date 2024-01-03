@@ -11,6 +11,7 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 const rehypeAddClasses = require('rehype-add-classes')
 
+//@ts-ignore
 import rehypeFigure from '@microflash/rehype-figure'
 import rehypeDocument from 'rehype-document'
 import rehypeKatex from 'rehype-katex'
