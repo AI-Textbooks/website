@@ -9,19 +9,17 @@ import matter from 'gray-matter'
 
 // Import 'remark', library for rendering markdown
 import { remark } from 'remark'
-import html from 'remark-html'
-const rehypeAddClasses = require('rehype-add-classes');
+const rehypeAddClasses = require('rehype-add-classes')
 
-import rehypeStringify from 'rehype-stringify'
-import { join } from 'path'
-import { unified } from 'unified'
-import remarkGfm from 'remark-gfm'
+import rehypeFigure from '@microflash/rehype-figure'
+import rehypeDocument from 'rehype-document'
+import rehypeKatex from 'rehype-katex'
 import rehypeSlug from 'rehype-slug'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeStringify from 'rehype-stringify'
+import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
-import rehypeShiki from '@leafac/rehype-shiki'
-import * as shiki from 'shiki'
 
 // --------------------------------
 // GET THE PATH OF THE POSTS FOLDER
@@ -65,7 +63,12 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string, description: string, author: [string] }),
+      ...(matterResult.data as {
+        date: string
+        title: string
+        description: string
+        author: [string]
+      }),
     }
   })
 
@@ -127,14 +130,22 @@ export async function getPostData(id: string) {
     .use(remarkGfm)
     .use(rehypeStringify)
     .use(rehypeSlug)
+    .use(rehypeFigure)
     .use(rehypeAddClasses, {
       // Define your default classes here
-      'h1': 'text-3xl',
-      'p': 'text',
-      'h2': 'text-2xl font-header font-medium text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-200/70 '
+      h1: 'text-3xl',
+      p: 'text',
+      h2: 'text-2xl font-header font-medium text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-200/70 ',
+      img: 'mx-auto',
+      figcaption: 'text-center text-sm mt-2',
       // Add more tags as needed
     })
-    //.use(rehypeStringify)
+    .use(rehypeDocument, {
+      // Get the latest one from: <https://katex.org/docs/browser>.
+      css: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css',
+    })
+    .use(remarkMath)
+    .use(rehypeKatex)
     .process(matterResult.content)
   const contentHtml = processedContent.toString()
 
