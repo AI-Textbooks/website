@@ -65,7 +65,12 @@ export default async function Post({ params }: Props) {
           </address>
         </header>
         <div className='mb-6'>
-          <MP3Player src={'/audio/' + postData.audio} />
+          <MP3Player
+            src={
+              'https://ai-textbooks.s3.eu-central-1.amazonaws.com/' +
+              postData.audio
+            }
+          />
         </div>
         <div
           className='prose prose-lg space-y-4'
