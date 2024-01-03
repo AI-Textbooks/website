@@ -249,7 +249,7 @@ $$
   \text{Information units} &=  e^t \\
   \text{Learning required} &=  ln(e^t) + 1 \\
   \text{Learning pace} &=  1 \\
-  \text{Learning per unit} &=  \dfrac{1}{e^t}
+  \dfrac{\text{Learning}}{\text{Unit}} &=  \dfrac{1}{e^t}
 \end{align*}
 $$
 
