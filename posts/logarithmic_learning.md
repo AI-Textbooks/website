@@ -116,7 +116,7 @@ The study of information theory, intersects the realms of mathematics and commun
 
 The application of information theory to the educational process is best understood through its communication model, which comprises several critical components:
 
-![Schematic diagram of a general communication system, by Claude Shannon [[1]]](/images/communication_system.png)
+![Schematic diagram of a general communication system, by Claude Shannon [1]](/images/communication_system.png)
 
 **Sender**
 
