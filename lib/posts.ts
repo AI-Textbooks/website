@@ -139,6 +139,12 @@ export async function getPostData(id: string) {
       h2: 'text-2xl font-header font-medium text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-200/70 ',
       img: 'mx-auto',
       figcaption: 'text-center text-sm mt-2',
+      h3: 'text-xl font-header font-medium text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-200/70 ',
+      h4: 'text-lg font-header font-medium text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-200/70 ',
+      ul: 'list-disc list-inside',
+      ol: 'list-decimal list-inside',
+      strong: 'font-bold',
+      em: 'italic',
       // Add more tags as needed
     })
     .use(rehypeDocument, {
