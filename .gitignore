@@ -50,7 +50,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/ # used by website
 lib64/
 parts/
 sdist/
