@@ -6,7 +6,7 @@ const BlogList = ({ posts }) => {
       {posts.map(({ id, date, title, description }) => {
         return (
           <Link href={`/posts/${id}`} key={id}>
-            <div className='rounded-xl max-w-sm rounded-xl w-full p-10 dark:border-emerald-300 dark:border hover:border-cyan-200/70'>
+            <div className='h-full rounded-xl max-w-sm rounded-xl w-full p-10 dark:border-emerald-300 dark:border hover:border-cyan-200/70'>
               <h2 className='font-header text-xl font-medium'>{title}</h2>
               <p className='text-gray-700 dark:text-gray-300'>
                 {description}

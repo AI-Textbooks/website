@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Hind } from "next/font/google";
 import { AppBar } from "./AppBar";
 import "./globals.css";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
 const inter = Hind({ subsets: ["latin"], weight: ["300"] });
 

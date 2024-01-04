@@ -1,11 +1,6 @@
-import Hero from './components/hero'
+import Hero from './components/Hero'
 import SectionTitle from './components/sectionTitle'
-
-import { benefitOne, benefitTwo } from './components/data'
-import Footer from './components/footer'
 import Values from './components/values'
-import Cta from './components/cta'
-import Timeline from './components/timeline'
 
 export default function Home() {
   return (
