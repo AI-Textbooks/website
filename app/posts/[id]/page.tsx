@@ -67,7 +67,7 @@ export default async function Post({ params }: Props) {
         </header>
         {postData.summary && (
           <div
-            className='mb-6 [&_summary]:text-base [&_summary]:text-gray-500 [&_summary]:dark:text-gray-400'
+            className='mb-6 [&_summary]:text-base [&_summary]:text-gray-500 [&_summary]:dark:text-gray-400 [&_summary]:cursor-pointer [&_summary]:select-none [&_summary]:hover:text-gray-900 [&_summary]:dark:hover:text-white [&_summary]:transition-colors [&_summary]:duration-200 [&_summary]:ease-in-out border border-gray-200 dark:border-gray-700 rounded-md p-2'
             dangerouslySetInnerHTML={{
               __html:
                 '<details><summary>Summary</summary>\n' +
@@ -75,12 +75,10 @@ export default async function Post({ params }: Props) {
                   .split('\n\n')
                   .map(
                     (paragraph) => `<p
-                    style="margin-top: 1.5rem; margin-bottom: 1.5rem;"
+                    style="margin-top: 1.5rem;"
                   >${paragraph}</p>`
                   )
                   .join('\n') +
-                // Bottom line
-                '<p style="margin-top: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgb(156,163,175);"></p>' +
                 '\n</details>',
             }}
           ></div>
