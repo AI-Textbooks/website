@@ -1,7 +1,6 @@
 import { MP3Player } from '@/app/components/mp3player'
 import { getPostData } from '@/lib/posts'
-import { PostData } from '@/app/types/types';
-import { Metadata } from 'next';
+import { PostData } from '../../types/types';
 
 type Params = {
   id: string
@@ -18,7 +17,6 @@ export async function generateMetadata({ params }: Props) {
     title: postData.title,
     openGraph: {
       title: postData.title,
-      images: `/api/og/?title=${postData.title}`
     },
   }
 }
