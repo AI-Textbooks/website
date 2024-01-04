@@ -10,14 +10,8 @@ export const metadata: Metadata = {
   title: "AI Textbooks",
   description: "The global knowledge base architecture",
   metadataBase: new URL('https://ai-textbooks.com'),
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-US': '/en-US',
-      'de-DE': '/de-DE',
-    },
-  },
   openGraph: {
+    title: "AI Textbooks",
     images: '/opengraph-image.png',
   },
 }
