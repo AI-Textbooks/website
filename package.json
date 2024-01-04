@@ -13,6 +13,7 @@
     "@leafac/rehype-shiki": "^2.2.1",
     "@microflash/rehype-figure": "^2.0.0",
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
+    "@vercel/og": "^0.6.2",
     "contentlayer": "^0.3.4",
     "gray-matter": "^4.0.3",
     "next": "13.5.6",
