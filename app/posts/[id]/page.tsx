@@ -15,7 +15,7 @@ type PostData = {
   description: string
   author: [string]
   contentHtml: string
-  audio: string
+  summary?: string
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -64,6 +64,26 @@ export default async function Post({ params }: Props) {
             </div>
           </address>
         </header>
+        {postData.summary && (
+          <div
+            className='mb-6 [&_summary]:text-base [&_summary]:text-gray-500 [&_summary]:dark:text-gray-400'
+            dangerouslySetInnerHTML={{
+              __html:
+                '<details><summary>Summary</summary>\n' +
+                postData.summary
+                  .split('\n\n')
+                  .map(
+                    (paragraph) => `<p
+                    style="margin-top: 1.5rem; margin-bottom: 1.5rem;"
+                  >${paragraph}</p>`
+                  )
+                  .join('\n') +
+                // Bottom line
+                '<p style="margin-top: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgb(156,163,175);"></p>' +
+                '\n</details>',
+            }}
+          ></div>
+        )}
         <div className='mb-6'>
           <MP3Player
             src={
