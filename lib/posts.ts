@@ -165,8 +165,8 @@ export async function getPostData(id: string) {
       title: string
       description: string
       author: [string]
-      audio: string
-      summary: string
+      audio?: string
+      summary?: string
     }),
   }
 }

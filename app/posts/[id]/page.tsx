@@ -15,6 +15,7 @@ type PostData = {
   description: string
   author: [string]
   contentHtml: string
+  audio?: string
   summary?: string
 }
 
@@ -84,14 +85,16 @@ export default async function Post({ params }: Props) {
             }}
           ></div>
         )}
-        <div className='mb-6'>
-          <MP3Player
-            src={
-              'https://ai-textbooks.s3.eu-central-1.amazonaws.com/' +
-              postData.audio
-            }
-          />
-        </div>
+        {postData.audio && (
+          <div className='mb-6'>
+            <MP3Player
+              src={
+                'https://ai-textbooks.s3.eu-central-1.amazonaws.com/' +
+                postData.audio
+              }
+            />
+          </div>
+        )}
         <div
           className='prose prose-lg space-y-4'
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
