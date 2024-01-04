@@ -2,7 +2,7 @@ export const MP3Player = ({ src }: { src: string }) => {
   return (
     <div className='py-2'>
       <div className='space-y-2'>
-        <audio controls className='w-full'>
+        <audio controls className='w-full' preload='none'>
           <source src={src} type='audio/mpeg' />
           Your browser does not support the audio element.
         </audio>
