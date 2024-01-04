@@ -69,6 +69,7 @@ export function getSortedPostsData() {
         title: string
         description: string
         author: [string]
+        summary?: string
       }),
     }
   })

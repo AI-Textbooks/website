@@ -1,22 +1,10 @@
-import Link from 'next/link'
 import BlogList from '../components/BlogList'
 
 import { getSortedPostsData } from '@/lib/posts'
-
-type AllPostsData = {
-  date: string
-  title: string
-  id: string,
-  author: [string]
-}[]
-
-const authors = [
-  { id: 'john', name: 'John Choque', bio: 'Computer Scientist'},
-  { id: 'mathias', name: 'Mathias Torp', bio: 'Innovation Engineer'},
-]
+import { PostMetaData } from '../types/types';
 
 export default function Posts({}) {
-  const allPostsData: AllPostsData = getSortedPostsData()
+  const allPostsData: PostMetaData[] = getSortedPostsData()
 
   return (
     <>

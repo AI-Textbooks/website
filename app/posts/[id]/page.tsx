@@ -1,5 +1,6 @@
 import { MP3Player } from '@/app/components/mp3player'
 import { getPostData } from '@/lib/posts'
+import { PostData } from '@/app/types/types';
 
 type Params = {
   id: string
@@ -7,16 +8,6 @@ type Params = {
 
 type Props = {
   params: Params
-}
-
-type PostData = {
-  title: string
-  date: string
-  description: string
-  author: [string]
-  contentHtml: string
-  audio?: string
-  summary?: string
 }
 
 export async function generateMetadata({ params }: Props) {
