@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ai-textbooks.com'),
   openGraph: {
     title: "AI Textbooks",
-    images: `/api/og`
+    images: '/api/og'
   },
 }
 
