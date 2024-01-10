@@ -23,3 +23,7 @@ body {
   background: rgb(var(--background-rgb));
 }
 
+li {
+  margin-left: 1.5rem;
+}
+
