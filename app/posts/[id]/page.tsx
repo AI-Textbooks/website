@@ -57,7 +57,7 @@ export default async function Post({ params }: Props) {
             </div>
           </address>
         </header>
-        {postData.summary && (
+        {postData.summaryHtml && (
           <div
             className='mb-6 [&_summary]:text-base [&_summary]:text-gray-500 [&_summary]:dark:text-gray-400 [&_summary]:cursor-pointer [&_summary]:select-none [&_summary]:hover:text-gray-900 [&_summary]:dark:hover:text-white [&_summary]:transition-colors [&_summary]:duration-200 [&_summary]:ease-in-out border border-gray-200 dark:border-gray-700 rounded-md p-2'
             dangerouslySetInnerHTML={{
