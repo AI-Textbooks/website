@@ -142,8 +142,8 @@ export async function getPostData(id: string) {
       figcaption: 'text-center text-sm mt-2',
       h3: 'text-xl font-header font-medium text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-200/70 ',
       h4: 'text-lg font-header font-medium text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-200/70 ',
-      ul: 'list-disc list-inside',
-      ol: 'list-decimal list-inside',
+      ul: 'list-disc list-outside',
+      ol: 'list-decimal list-outside',
       strong: 'font-bold',
       em: 'italic',
       // Add more tags as needed

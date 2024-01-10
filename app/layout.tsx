@@ -45,10 +45,10 @@ export default function RootLayout({
       <body className={inter.className}>
         {/* Empty lists to enforce tailwind compiling it for use in markdown */}
         <ul className='hidden'>
-          <li className='list-disc list-inside' />
+          <li className='list-disc list-outside' />
         </ul>
         <ol className='hidden'>
-          <li className='list-decimal list-inside' />
+          <li className='list-decimal list-outside' />
         </ol>
         <AppBar />
         {children}
