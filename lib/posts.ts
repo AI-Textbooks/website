@@ -126,7 +126,7 @@ export async function getPostData(id: string) {
   const matterResult = matter(fileContents)
 
   // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
+  const processor = remark()
     .use(remarkParse)
     .use(remarkRehype)
     .use(remarkGfm)
@@ -154,20 +154,22 @@ export async function getPostData(id: string) {
     })
     .use(remarkMath)
     .use(rehypeKatex)
-    .process(matterResult.content)
-  const contentHtml = processedContent.toString()
+  const contentHtml = (await processor.process(matterResult.content)).toString()
+  const summaryHtml = (
+    await processor.process(matterResult.data.summary.replace('\n', '\n\n'))
+  ).toString()
 
   // Combine the data with the id
   return {
     id,
     contentHtml,
+    summaryHtml,
     ...(matterResult.data as {
       date: string
       title: string
       description: string
       author: [string]
       audio?: string
-      summary?: string
     }),
   }
 }
