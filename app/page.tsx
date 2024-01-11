@@ -1,4 +1,3 @@
-import Contact from './components/Contact'
 import Hero from './components/Hero'
 import SectionTitle from './components/sectionTitle'
 import Benefits from './components/Benefits'
