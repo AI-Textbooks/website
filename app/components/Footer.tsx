@@ -29,7 +29,7 @@ export default function Footer() {
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Adapting AI interfaces to benefit from collaborative knowledge repositories
+              Custom GPTs tailored to your company
             </div>
           </div>
 

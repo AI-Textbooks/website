@@ -1,19 +1,22 @@
+import Contact from './components/Contact'
 import Hero from './components/Hero'
 import SectionTitle from './components/sectionTitle'
-import Values from './components/values'
+import Benefits from './components/Benefits'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <>
       <Hero />
       <SectionTitle pretitle='Our vision' title="It's all about collaboration">
-        Imagine a world where we can all benefit from the knowledge of each
-        other. A world where AI adapts any kind of content according to
-        individual cognitive and learning preferences, ensuring accessible and
-        optimized learning experiences. A world where we can all collaborate for
-        a better future.
+        Imaging a custom GPT that has the knowledge of your company and allows your team to get all the benefits of artificial intelligence
       </SectionTitle>
-      <Values />
+      <Benefits />
+      <SectionTitle pretitle="Let's build" title="Let's build your custom GPT">
+        Get in touch with us and we will schedule a meeting with you.
+        <br></br>
+        <Link id='contact' href="mailto:hello@ai-textbooks.com" className='text-teal-300'>hello@ai-textbooks.com</Link>
+      </SectionTitle>
     </>
   )
 }
